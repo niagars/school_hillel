@@ -11,6 +11,10 @@ class ComposerStaticInitc2ed7a6108326d39802aba8372776cc3
         array (
             'Core\\' => 5,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -18,17 +22,19 @@ class ComposerStaticInitc2ed7a6108326d39802aba8372776cc3
         array (
             0 => __DIR__ . '/../..' . '/core',
         ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
     );
 
     public static $classMap = array (
+        'App\\controllers\\About' => __DIR__ . '/../..' . '/app/controllers/About.php',
+        'App\\controllers\\Error404' => __DIR__ . '/../..' . '/app/controllers/Error404.php',
+        'App\\controllers\\Gallery' => __DIR__ . '/../..' . '/app/controllers/Gallery.php',
+        'App\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Core\\car' => __DIR__ . '/../..' . '/core/car.php',
-        'Core\\engine' => __DIR__ . '/../..' . '/core/engine.php',
-        'Core\\fuel' => __DIR__ . '/../..' . '/core/fuel.php',
-        'Core\\horsepow' => __DIR__ . '/../..' . '/core/horsepow.php',
-        'Core\\tank' => __DIR__ . '/../..' . '/core/tank.php',
-        'Core\\type' => __DIR__ . '/../..' . '/core/type.php',
-        'Core\\type_fuel' => __DIR__ . '/../..' . '/core/type_fuel.php',
+        'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
