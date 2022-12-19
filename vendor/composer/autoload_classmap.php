@@ -6,12 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\controllers\\About' => $baseDir . '/app/controllers/About.php',
+    'App\\controllers\\Error404' => $baseDir . '/app/controllers/Error404.php',
+    'App\\controllers\\Gallery' => $baseDir . '/app/controllers/Gallery.php',
+    'App\\controllers\\Home' => $baseDir . '/app/controllers/Home.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'Core\\car' => $baseDir . '/core/car.php',
-    'Core\\engine' => $baseDir . '/core/engine.php',
-    'Core\\fuel' => $baseDir . '/core/fuel.php',
-    'Core\\horsepow' => $baseDir . '/core/horsepow.php',
-    'Core\\tank' => $baseDir . '/core/tank.php',
-    'Core\\type' => $baseDir . '/core/type.php',
-    'Core\\type_fuel' => $baseDir . '/core/type_fuel.php',
+    'Core\\Router' => $baseDir . '/core/Router.php',
 );
