@@ -8,6 +8,14 @@ class Error404
 		{
 			echo "ERROR404";
 		}
+		public function method ()
+		{
+			echo 'Method';
+		}
+		public function error ()
+		{
+			echo 'Error';
+		}
 	}
 
 

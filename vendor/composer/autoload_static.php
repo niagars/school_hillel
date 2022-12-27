@@ -30,10 +30,17 @@ class ComposerStaticInitc2ed7a6108326d39802aba8372776cc3
 
     public static $classMap = array (
         'App\\controllers\\About' => __DIR__ . '/../..' . '/app/controllers/About.php',
+        'App\\controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
         'App\\controllers\\Error404' => __DIR__ . '/../..' . '/app/controllers/Error404.php',
         'App\\controllers\\Gallery' => __DIR__ . '/../..' . '/app/controllers/Gallery.php',
         'App\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
+        'App\\controllers\\Users' => __DIR__ . '/../..' . '/app/controllers/Users.php',
+        'App\\models\\About' => __DIR__ . '/../..' . '/app/models/About.php',
+        'App\\models\\Gallery' => __DIR__ . '/../..' . '/app/models/Gallery.php',
+        'App\\models\\Home' => __DIR__ . '/../..' . '/app/models/Home.php',
+        'App\\models\\Users' => __DIR__ . '/../..' . '/app/models/Users.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Core\\Render' => __DIR__ . '/../..' . '/core/Render.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
     );
 
