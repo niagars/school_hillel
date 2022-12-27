@@ -8,11 +8,11 @@
 <body>
 <h3>HOME</h3> 
 
-<h3>Вюшка для home</h3> 
+<h3>Вюшка для home from table home</h3> 
 	<?php foreach ($test as $key => $value): ?>
 	<?= $key ?>
 	<?''?>
-	<?= $value ?>
+	<?= print_r ($value) ?>
 	<br>
 	<?php endforeach ?>
 
