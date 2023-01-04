@@ -2,17 +2,19 @@
 
 namespace App\models;
 
+use PDO;
+
+use Core\Orm\Select;
+
 class Home
 {
 	public function index ()
 	{
-		$dbh = new \PDO('mysql:host=localhost; dbname=mybase', 'root', '');
-		$sth = $dbh -> query ('SELECT * FROM home');
-		$rows = $sth -> fetchAll (\PDO::FETCH_ASSOC);
-		return $rows;
+		$select = new Select();
+		$arrName = mb_strtolower(get_class($this));
+		$name = explode('\\', $arrName);
+		return $select -> execute ("$name[2]");
 	}
 }
-
-
 
 ?>

@@ -40,6 +40,8 @@ class ComposerStaticInitc2ed7a6108326d39802aba8372776cc3
         'App\\models\\Home' => __DIR__ . '/../..' . '/app/models/Home.php',
         'App\\models\\Users' => __DIR__ . '/../..' . '/app/models/Users.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Core\\Orm\\DBConnector' => __DIR__ . '/../..' . '/core/Orm/DBConnector.php',
+        'Core\\Orm\\Select' => __DIR__ . '/../..' . '/core/Orm/Select.php',
         'Core\\Render' => __DIR__ . '/../..' . '/core/Render.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
     );

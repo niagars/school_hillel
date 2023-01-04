@@ -17,6 +17,8 @@ return array(
     'App\\models\\Home' => $baseDir . '/app/models/Home.php',
     'App\\models\\Users' => $baseDir . '/app/models/Users.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Core\\Orm\\DBConnector' => $baseDir . '/core/Orm/DBConnector.php',
+    'Core\\Orm\\Select' => $baseDir . '/core/Orm/Select.php',
     'Core\\Render' => $baseDir . '/core/Render.php',
     'Core\\Router' => $baseDir . '/core/Router.php',
 );
