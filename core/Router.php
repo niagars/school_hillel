@@ -9,7 +9,7 @@ class Router
 		public function run ()
 		{
 			$url = !empty($_SERVER['REDIRECT_URL']) ? $_SERVER ['REDIRECT_URL'] : '/';
-			$config = require '../config/common.php';
+			$config = require '../config/routing.php';
 			//var_dump ($config);
 			if (array_key_exists ($url, $config))
 			{

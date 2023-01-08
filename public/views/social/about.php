@@ -7,11 +7,11 @@
 </head>
 <body>
 <h3>ABOUT</h3> 
-<h3>Вюшка для about</h3> 
+<h3>Вюшка для about from table about</h3> 
 	<?php foreach ($test as $key => $value): ?>
 	<?= $key ?>
 	<?''?>
-	<?= $value ?>
+	<?= print_r ($value) ?>
 	<br>
 	<?php endforeach ?>
 

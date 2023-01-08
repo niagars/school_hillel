@@ -2,11 +2,13 @@
 
 return 
 [
-	'/' => 'Home@index',
-	'/home' => 'Home@index',
-	'/gallery' => 'Gallery@index',
-	'/about' => 'About@index',
-	'/users' => 'Users@index',
+	"DB" => [
+		"driver" => "mysql",
+		"host" => "localhost",
+		"db_name" => "mybase",
+		"login" => "root",
+		"password" => ''
+	]
 ]
 
 ?>

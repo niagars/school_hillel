@@ -8,11 +8,11 @@
 <body>
 <h3>USERS</h3> 
 
-<h3>Вюшка для users</h3> 
+<h3>Вюшка для users from table users</h3> 
 	<?php foreach ($test as $key => $value): ?>
 	<?= $key ?>
 	<?'- '?>
-	<?= $value ?>
+	<?= print_r ($value) ?>
 	<br>
 	<?php endforeach ?>
 
