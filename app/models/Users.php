@@ -15,13 +15,23 @@ class Users
 		$rows = $sth -> fetchAll (PDO::FETCH_ASSOC);
 		return $rows;
 	} */
+	private string $tableName = 'users';
+	private string $tableNameJoin = 'about';
 	
 	public function index ()
 	{
 		$select = new Select();
-		$arrName = mb_strtolower(get_class($this));
-		$name = explode('\\', $arrName);
-		return $select -> execute ("$name[2]");
+		//$select->setFields(['id', 'college']);
+		$select->setTableName($this->tableName);
+		//$select->setOrderBy(['college']);
+		//$select->setGroupBy(['college']);
+		/* $select->setLimit([0, 2]);
+		$select->setTypeJoin (' LEFT JOIN ');
+		$select->setTableNameJoin($this->tableNameJoin);
+		$select->setFieldsJoin(['address, delivery']);
+		$select->setFieldJoinUsing('id'); */
+		
+		return $select -> execute ();
 	}
 }
 

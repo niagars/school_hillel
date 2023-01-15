@@ -8,12 +8,23 @@ use Core\Orm\Select;
 
 class Home
 {
+	private string $tableName = 'home';
+	private array $tableNameJoin = ['about', 'users'];
+	
 	public function index ()
 	{
 		$select = new Select();
-		$arrName = mb_strtolower(get_class($this));
-		$name = explode('\\', $arrName);
-		return $select -> execute ("$name[2]");
+		$select->setFields(['school']);
+		$select->setTableName($this->tableName);
+		$select->setOrderBy(['college']);
+		$select->setGroupBy(['school']);
+		$select->setLimit([0, 2]);
+		$select->setTypeJoin (' RIGHT JOIN ');
+		$select->setTableNameJoin($this->tableNameJoin);
+		$select->setFieldsJoin(['address, delivery']);
+		$select->setFieldJoinUsing('id');
+
+		return $select -> execute ();
 	}
 }
 
