@@ -10,8 +10,7 @@ public function dataInsert (array $data)
 		<td>name</td>
 		<td>age</td>
 		<td>email</td>
-	</tr>
-	<tr>';
+	</tr>';
 		foreach ($data as $key=>$value)
 		{
 			$html .= '<tr>';
@@ -20,7 +19,7 @@ public function dataInsert (array $data)
 			$html .= '<td>' . $value['email'] .  '</td>';
 			$html .= '</tr>';
 		};
-	$html .= '</tr></table>';
+	$html .= '</table>';
 	echo $html;
 	}
 
