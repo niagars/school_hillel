@@ -15,8 +15,8 @@ class DbImport implements iImport
 		foreach ($data as $value)
 		{
 		$sql = "INSERT INTO users_age (name, age, email) VALUES ('$value[name]', $value[age], '$value[email]')";
-		$this->setDBConnector() -> query ($sql);
 		}
+		$this->setDBConnector() -> query ($sql);
 	}
 	
 }
