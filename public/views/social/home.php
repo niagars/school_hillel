@@ -11,7 +11,7 @@
 <h3>Вюшка для home from table home</h3> 
 	<?php foreach ($test as $key => $value): ?>
 	<?= $key ?>
-	<?' '?>
+	<?'- '?>
 	<?= print_r ($value) ?>
 	<br>
 	<?php endforeach ?>

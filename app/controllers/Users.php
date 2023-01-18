@@ -10,9 +10,20 @@ class Users
 		public function index ()
 		{
 			$model = new modelUsers();
-			$data ['test'] = $model -> index();
-			Render::render('social/users.php', $data);
+			$datax ['test'] = $model -> index();
+			//print_r ($_GET);
+			$data[] = $model->insert($_GET);
+			Render::render('social/users.php', $datax);
+			
 		}
+		
+		/* public function insert ()
+		{
+			$model = new modelUsers();
+			$data[] = $model->insert($_GET);
+			//print_r ($_GET);
+			Render::render('social/users.php');
+		} */
 	}
 
 

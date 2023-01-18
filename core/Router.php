@@ -16,6 +16,7 @@ class Router
 				$query = explode('@', $config[$url]);
 				$className = $query[0];
 				$methodName = $query[1];
+				//var_dump ($methodName);
 			}
 			else
 			{
