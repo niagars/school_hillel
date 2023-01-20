@@ -1,6 +1,6 @@
 <?php
 
-include_once 'DbImport.php';
+/* include_once 'DbImport.php';
 include_once 'ReportImport.php';
 
 
@@ -17,7 +17,13 @@ $sql = new DbImport();
 $sql -> dataInsert($data);
 
 $table = new ReportImport();
-$table -> dataInsert($data);
+$table -> dataInsert($data); */
 
+include_once 'ExportData.php';
+
+$sql = new DbImport();
+$sql -> dataInsert($_GET);
+
+echo "Data export OK!"
 
 ?>

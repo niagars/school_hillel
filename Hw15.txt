@@ -1,0 +1,18 @@
+Створення таблиці
+
+CREATE TABLE `mybase`.`users_create` 
+(`id` INT NOT NULL AUTO_INCREMENT , 
+`name` CHAR(200) NOT NULL , 
+`email` CHAR(100) NOT NULL , 
+`age` TINYINT NOT NULL , 
+`create_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+`update_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+Унікальний індекс
+CREATE UNIQUE INDEX index_email ON `users_create`(`email`);
+
+
+Простий індекс
+CREATE INDEX index_age ON `users_create`(`age`);
+
