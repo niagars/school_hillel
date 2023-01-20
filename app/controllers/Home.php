@@ -12,7 +12,17 @@ class Home extends Controller
 		{
 			$model = new modelHome();
 			$data ['test'] = $model -> index();
+			//print_r ($_GET);
 			Render::render('social/home.php', $data);
+			
+		}
+		
+		public function insert ()
+		{
+			$model = new modelHome();
+			$data[] = $model->insert($_GET);
+			//print_r ($_GET);
+			Render::render('social/regestry.php');
 		}
 		/* public function setTest (string $test) // Метод створення нової сторінки після назви контролера
 		{

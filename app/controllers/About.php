@@ -11,8 +11,9 @@ class About
 		{
 			//echo "Hi! I'm About";
 			$model = new modelAbout();
-			$data ['test'] = $model -> index();
-			Render::render('social/about.php', $data);
+			$datax ['test'] = $model -> index();
+			$data[] = $model->insert($_POST);
+			Render::render('social/about.php', $datax);
 		}
 		/* public function setTest (string $test) // Метод створення нової сторінки після назви контролера
 		{

@@ -7,6 +7,7 @@ return
 	'/gallery' => 'Gallery@index',
 	'/about' => 'About@index',
 	'/users' => 'Users@index',
+	'/regestry' =>'Home@insert',
 ]
 
 ?>
