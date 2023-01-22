@@ -43,6 +43,8 @@ class ComposerStaticInitc2ed7a6108326d39802aba8372776cc3
         'Core\\Orm\\DBConnector' => __DIR__ . '/../..' . '/core/Orm/DBConnector.php',
         'Core\\Orm\\Insert' => __DIR__ . '/../..' . '/core/Orm/Insert.php',
         'Core\\Orm\\Select' => __DIR__ . '/../..' . '/core/Orm/Select.php',
+        'Core\\Orm\\Sql' => __DIR__ . '/../..' . '/core/Orm/Sql.php',
+        'Core\\Orm\\Where' => __DIR__ . '/../..' . '/core/Orm/Where.php',
         'Core\\Render' => __DIR__ . '/../..' . '/core/Render.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
     );

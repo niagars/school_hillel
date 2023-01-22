@@ -3,12 +3,9 @@
 namespace Core\Orm;
 
 use PDO;
-use Core\Orm\DBConnector;
 
-class Select
+class Select extends Sql
 {
-	private string $tableName;
-	
 	private array $fields = ['*'];
 	
 	private array $orderBy;
@@ -25,24 +22,17 @@ class Select
 	
 	private string $fieldJoinUsing;
 	
-	private PDO $connector;
 	
-	public function __construct ()
-	{
-		$connector = new DBConnector();
-		$this->connector = $connector->connect();
-	}
 	
 	public function execute(): array
 	{
 		$sql = $this->buildQuery();
 		$query = $this->connector -> query ($sql);
-		//var_dump ($query);
 		$rows = $query -> fetchAll (PDO::FETCH_ASSOC);
 		return $rows;
 	}
 
-	private function buildQuery (): string
+	protected function buildQuery (): string
 	{
 		$sql = 'SELECT ' . $this->getFieldsString() . ' FROM ' .$this->tableName;
 		
@@ -50,24 +40,26 @@ class Select
 		{$sql = 'SELECT ' .$this->getFieldsString() .',' .$this->getTableNameJoin() .' FROM ' .$this->tableName;
 		foreach ($this->tableNameJoin as $key=>$name)
 			{
-			$sql .= $this->typeJoin . $this->tableNameJoin[$key] . ' USING (' .$this->fieldJoinUsing .')';}
+				$sql .= $this->typeJoin . $this->tableNameJoin[$key] . ' USING (' .$this->fieldJoinUsing .')';}
 			}
+		if (!empty ($this->where))
+		{
+			$sql .= ' WHERE ' . $this->getWhere();
+		}
 		if (!empty ($this->groupBy))
-		{$sql .= ' GROUP BY ' .$this->getGroupBy();}	
-	
+		{
+			$sql .= ' GROUP BY ' .$this->getGroupBy();
+		}	
 		if (!empty($this->orderBy)) 
-		{$sql .= ' ORDER BY ' .$this->getOrderBy();}
-	
+		{
+			$sql .= ' ORDER BY ' .$this->getOrderBy();
+			}
 		if (!empty($this->limit)) 
-		{$sql .= ' LIMIT ' .$this->getLimit();}
-	
+		{
+			$sql .= ' LIMIT ' .$this->getLimit();
+		}
+		//var_dump ($sql);
 		return $sql;
-	}
-	
-	public function setTableName (string $tableName)
-	{
-		$this->tableName = $tableName;
-		return $this;
 	}
 	
 	public function setFields (array $fields)

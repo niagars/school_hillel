@@ -2,43 +2,16 @@
 
 namespace Core\Orm;
 
-use PDO;
-use Core\Orm\DBConnector;
-
-class Insert
+class Insert extends Sql
 {
-	private string $tableName;
-	
 	private array $colums;
 	
 	private array $values;
 			
-	private PDO $connector;
-	
-	public function __construct ()
-	{
-		$connector = new DBConnector();
-		$this->connector = $connector->connect();
-	}
-	
-	public function execute()
-	{
-		$sql = $this->buildQuery();
-		//var_dump ($sql);
-		$query = $this->connector -> query ($sql);
-		return $query;
-	}
-
-	private function buildQuery (): string
+	protected function buildQuery (): string
 	{
 		$sql = 'INSERT INTO ' . $this->tableName . '(' . $this->getColums() . ') VALUES (' . $this->getValues() . ')';
 		return $sql;
-	}
-	
-	public function setTableName (string $tableName)
-	{
-		$this->tableName = $tableName;
-		return $this;
 	}
 	
 	public function setColums (array $colums)
