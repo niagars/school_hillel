@@ -20,6 +20,8 @@ return array(
     'Core\\Orm\\DBConnector' => $baseDir . '/core/Orm/DBConnector.php',
     'Core\\Orm\\Insert' => $baseDir . '/core/Orm/Insert.php',
     'Core\\Orm\\Select' => $baseDir . '/core/Orm/Select.php',
+    'Core\\Orm\\Sql' => $baseDir . '/core/Orm/Sql.php',
+    'Core\\Orm\\Where' => $baseDir . '/core/Orm/Where.php',
     'Core\\Render' => $baseDir . '/core/Render.php',
     'Core\\Router' => $baseDir . '/core/Router.php',
 );

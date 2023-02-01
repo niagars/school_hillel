@@ -32,6 +32,7 @@ class Home
 	{
 		$select = new Select();
 		$select->setTableName($this->tableName);
+		//$select->setWhere()
 		return $select->execute(); 
 	}
 	
